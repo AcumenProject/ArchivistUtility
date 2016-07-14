@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<foo>
+ 	<bar>
+		<error>%mistake%</error>
+		<error>%if%</error>
+		<error>%if:mistake%</error>
+		<error>%for%</error>
+		<a>%if:a:a%</a>
+		<a>%if:a:"a exists"%</a>
+		<b_set>
+%for:b:--%
+			<b>%each:b%</b>
+%next:b%
+		</b_set>
+		<c>%if:c:"c exists":"c does not exist"%</c>
+		<complex>%if:(a&&b)&&!c:"( a and b ) and !c"%</complex>
+		<complex>%if:(a&&b)&&(c||a):"(a and b) or (c or a)"%</complex>
+		<complex>%if:!(a&&b)||!c:"!( a and b ) or !c"%</complex>
+	</bar>
+</foo>

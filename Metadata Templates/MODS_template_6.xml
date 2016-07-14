@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modsCollection xmlns="http://www.loc.gov/mods/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd">
+  <mods>
+    <titleInfo displayLabel="title"><title>{{Title}}</title></titleInfo>
+    <titleInfo type="alternative" displayLabel="Other Title"><title>{{Other Title}}</title></titleInfo>
+    <titleInfo type="alternative" displayLabel="Cover Title"><title>{{Cover Title}}</title></titleInfo>
+    <titleInfo type="alternative" displayLabel="First Line of Text"><title>{{First Line of Text}}</title></titleInfo>
+    <titleInfo type="alternative" displayLabel="First Line of Chorus"><title>{{First Line of Chorus}}</title></titleInfo>
+    <titleInfo type="alternative" displayLabel="Masthead Title"><title>{{Masthead Title}}</title></titleInfo>
+    <titleInfo type="alternative" displayLabel="Special Issue"><title>{{Special Issue}}</title></titleInfo>
+    <titleInfo type="alternative" displayLabel="Title from Plate"><title>{{Title from Plate}}</title></titleInfo>
+    <name type="personal"><namePart>{{Creator(s)}}</namePart><role><roleTerm authority="marcRelator" type="text">{{if:Creator(s):"Creator"}}</roleTerm></role></name>
+		<name type="personal"><namePart>{{Arranger(s)}}</namePart><role><roleTerm authority="marcRelator" type="text">{{if:Arranger(s):"Arranger"}}</roleTerm></role></name>
+		<name type="personal"><namePart>{{Author(s)}}</namePart><role><roleTerm authority="marcRelator" type="text">{{if:Author(s):"Author"}}</roleTerm></role></name>
+		<name type="personal"><namePart>{{Composer(s)}}</namePart><role><roleTerm authority="marcRelator" type="text">{{if:Composer(s):"Composer"}}</roleTerm></role></name>
+		<name type="personal"><namePart>{{Conductor(s)}}</namePart><role><roleTerm authority="marcRelator" type="text">{{if:Conductor(s):"Conductor"}}</roleTerm></role></name>
+		<name type="personal"><namePart>{{Diariest(s)}}</namePart><role><roleTerm authority="marcRelator" type="text">{{if:Diariest(s):"Author"}}</roleTerm></role></name>
+		<name type="personal"><namePart>{{Etcher(s)}}</namePart><role><roleTerm authority="marcRelator" type="text">{{if:Etcher(s):"Etcher"}}</roleTerm></role></name>
+		<name type="personal"><namePart>{{Instrumentalist(s)}}</namePart><role><roleTerm authority="marcRelator" type="text">{{if:Instrumentalist(s):"Instrumentalist"}}</roleTerm></role></name>
+		<name type="personal"><namePart>{{Interviewee(s)}}</namePart><role><roleTerm authority="marcRelator" type="text">{{if:Interviewee(s):"Interviewee"}}</roleTerm></role></name>
+		<name type="personal"><namePart>{{Lyricist(s)}}</namePart><role><roleTerm authority="marcRelator" type="text">{{if:Lyricist(s):"Lyricist"}}</roleTerm></role></name>
+		<name type="personal"><namePart>{{Photographer(s)}}</namePart><role><roleTerm authority="marcRelator" type="text">{{if:Photographer(s):"Photographer"}}</roleTerm></role></name>
+		<name type="personal"><namePart>{{Sender(s)}}</namePart><role><roleTerm authority="marcRelator" type="text">{{if:Sender(s):"Correspondent"}}</roleTerm></role></name>
+		<name type="personal"><namePart>{{Vocalist(s)}}</namePart><role><roleTerm authority="marcRelator" type="text">{{if:Vocalist(s):"Vocalist"}}</roleTerm></role></name>
+		<name type="personal"><namePart>{{Donor(s)}}</namePart><role><roleTerm authority="marcRelator" type="text">{{if:Donor(s):"Donor"}}</roleTerm></role></name>
+		<name type="corporate"><namePart>{{Funder(s)}}</namePart><role><roleTerm authority="marcRelator" type="text">{{if:Funder(s):"Funder"}}</roleTerm></role></name>
+		<name type="personal"><namePart>{{Contributor(s)}}</namePart><role><roleTerm authority="marcRelator" type="text">{{if:Contributor(s):"Contributor"}}</roleTerm></role></name>
+		<name type="personal"><namePart>{{Editor(s)}}</namePart><role><roleTerm authority="marcRelator" type="text">{{if:Editor(s):"Editor"}}</roleTerm></role></name>
+		<name type="personal"><namePart>{{Interviewer(s)}}</namePart><role><roleTerm authority="marcRelator" type="text">{{if:Interviewer(s):"Interviewer"}}</roleTerm></role></name>
+		<name type="personal"><namePart>{{Performer(s)}}</namePart><role><roleTerm authority="marcRelator" type="text">{{if:Performer(s):"Performer"}}</roleTerm></role></name>
+		<name type="personal"><namePart>{{Recipient(s)}}</namePart><role><roleTerm authority="marcRelator" type="text">{{if:Recipient(s):"Recipient"}}</roleTerm></role></name>
+		<name type="corporate"><namePart>{{Digital Publisher}}</namePart><role><roleTerm authority="marcrelator" type="text">{{if:Digital Publisher:"Distributor"}}</roleTerm></role></name>
+    <typeOfResource>{{Type(s)}}</typeOfResource>
+{{for:Genre(s):;}}
+	<genre authority="bgtchm">{{each:Genre(s)}}</genre>
+{{next:Genre(s)}}
+    
+    <originInfo>	
+		<dateIssued>{{if:Publisher:Date(s)}}</dateIssued>
+		<dateIssued encoding="iso8601" keyDate="yes">{{if:Publisher:Date ISO}}</dateIssued>
+
+		<dateCreated>{{if:!Publisher&&Date(s):Date(s)}}</dateCreated>
+		<dateCreated>{{if:!Publisher&&Date of Photograph:Date of Photograph}}</dateCreated>
+		<dateCreated encoding="iso8601" keyDate="yes">{{if:!Publisher&&Date(s):Date ISO}}</dateCreated>
+		<dateCreated encoding="iso8601" keyDate="yes">{{if:!Publisher&&Date of Photograph:Date ISO}}</dateCreated>
+
+		<dateOther>{{if:!Publisher&&Performance Date:Performance Date}}</dateOther>
+		<dateOther encoding="iso8601" keyDate="yes">{{if:!Publisher&&Performance Date:Date ISO}}</dateOther>
+
+		<publisher>{{Publisher}}</publisher>
+		<place><placeTerm type="text">{{Place of Publication}}</placeTerm></place>
+		<place><placeTerm type="text">{{Performance Location}}</placeTerm></place>
+		<place><placeTerm type="text">{{Recipient Location}}</placeTerm></place>
+		<place><placeTerm type="text">{{Sender Location}}</placeTerm></place>
+		<place><placeTerm type="text">{{States Served}}</placeTerm></place>
+    </originInfo>
+    <language><languageTerm type="code" authority="iso639-2b">{{if:Language(s):Language(s):"English"}}</languageTerm></language><!-- default addition to all files unless specified otherwise below  --><!-- language><languageTerm type="text">English</languageTerm></language --><!-- default addition to all files unless specified in Language(s) column; may not be in spreadsheet  -->
+    <physicalDescription>
+      <extent>{{Format}}</extent>
+    </physicalDescription>
+    <abstract>{{Abstract}}</abstract>
+    <note displayLabel="Description">{{Description}}</note>
+    <note displayLabel="Scope and Content">{{Scope and Content}}</note>
+    <note displayLabel="Provenance" type="provenance">{{Provenance}}</note>
+    <note displayLabel="Funding Information" type="sponsorship">{{Funding Information}}</note>
+    <tableOfContents>{{Work(s)}}</tableOfContents>
+    <targetAudience>{{Audience}}</targetAudience>
+    <note displayLabel="Biographical and Historical Note">{{Biographic and Historical Note}}</note>        
+    <note displayLabel="Transcript">{{Transcript}}</note>
+    <identifier type="local">{{Identifier}}</identifier>
+    <identifier type="local" displayLabel="Music Plate Number">{{Plate Number}}</identifier>
+    <identifier type="local" displayLabel="Filename">{{Filename}}</identifier>
+        <subject>
+      <geographic>{{Location}}</geographic>
+    </subject>
+{{for:Subject(s):;}}
+<subject authority="lcsh">
+    <topic>{{each:Subject(s)}}</topic>
+</subject>
+{{next:Subject(s)}}
+
+    <location>
+        <physicalLocation authority="oclcorg">ALM</physicalLocation>
+        <physicalLocation displayLabel="Repository Collection" type="Collection">{{Repository Collection}}</physicalLocation>
+        <physicalLocation type="Collection Number">{{Collection Number}}</physicalLocation>
+            <physicalLocation type="Album Number">{{Album Number}}</physicalLocation>
+            <physicalLocation type="Box Number">{{Box Number}}</physicalLocation>
+            <physicalLocation type="Folder Number">{{Folder Number}}</physicalLocation>
+            <physicalLocation type="Photograph Number">{{Photograph Number}}</physicalLocation>
+            <url displayLabel="Streaming Media" note="Mode of Access">{{Source}}</url>
+        </location>
+    <accessCondition type="useAndReproduction" displayLabel="Copyright">{{Rights}}</accessCondition>
+    <accessCondition type="useAndReproduction" displayLabel="Terms">{{Terms}}</accessCondition>    
+    <classification authority="lcc">{{Call Number}}</classification>
+        <relatedItem displayLabel="Online Repository" type="host">
+            <titleInfo><title>The University of Alabama Libraries Digital Collections</title></titleInfo>
+        </relatedItem>
+        <relatedItem displayLabel="Digital Collection" type="host">
+            <titleInfo><title>{{Digital Collection}}</title></titleInfo>
+        </relatedItem>
+         <relatedItem displayLabel="Published In" type="otherVersion">
+            <titleInfo><title>{{Published In}}</title></titleInfo>
+        </relatedItem>       
+        <relatedItem displayLabel="Series Title" type="host">
+            <titleInfo><title>{{Series Title}}</title></titleInfo>
+        </relatedItem>
+        <relatedItem displayLabel="Is Referenced By" type="isReferencedBy">
+            <titleInfo><title>{{Is Referenced By}}</title></titleInfo>
+        </relatedItem>       
+  </mods>
+</modsCollection>
+<!--
+Creation Details:
+Generated by: {{__generator}}
+Data Source: {{__source}}
+Encoding Used: {{__encoding}}
+Created Date: {{__timestamp}}
+	
+Errors and Warnings:
+{{__errors}}
+	
+Unused Fields:
+{{__unused}}
+-->
+
+
