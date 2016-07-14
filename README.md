@@ -24,9 +24,9 @@ Archivist Utility is also available for Mac OS X and Linux on request. There is 
 
 Downloads
 ---------
-* <a href="downloads/archivist_utility.win.zip">Archivist Utility for Windows</a> (zip archive)
-* <a href="downloads/archivist_utility.osx.zip">Archivist Utility for Mac OS X</a> (zip archive)
-* <a href="downloads/archivist_utility.linux.zip">Archivist Utility for Linux</a> (zip archive)
+* <a href="https://github.com/AcumenProject/ArchivistUtility/releases/download/v0.2/archivist_utility.win.zip">Archivist Utility for Windows</a> (zip archive)
+* <a href="https://github.com/AcumenProject/ArchivistUtility/releases/download/v0.2/archivist_utility.osx.zip">Archivist Utility for Mac OS X</a> (zip archive)
+* <a href="https://github.com/AcumenProject/ArchivistUtility/releases/download/v0.2/archivist_utility.linux.zip">Archivist Utility for Linux</a> (zip archive)
 
 BOM-Skipping
 ------------
